@@ -161,6 +161,8 @@ h1 {
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 32px rgba(59, 91, 255, 0.5);
+    text-decoration: none;
+    color: inherit; /*herdar a cor do 'body'*/
 }
 
 .features {
