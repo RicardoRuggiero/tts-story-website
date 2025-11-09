@@ -154,6 +154,8 @@ h1 {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 8px 24px rgba(59, 91, 255, 0.4);
+    text-decoration: none;
+    color: inherit; /*herdar a cor do 'body'*/
 }
 
 .cta-button:hover {
