@@ -313,7 +313,17 @@ body {
         font-size: 1.75rem;
     }
 }
-
+/* /////////////////////!!! ROLAGEM ???/////////////////////// */
+.page-wrapper {
+    height: 100vh;/* Ocupa a altura da tela */
+    overflow-y: auto;/* ADICIONA A ROLAGEM apenas aqui */
+    /* Garante que fique acima do background */
+    position: relative;
+    z-index: 2; 
+    /* As regras de layout que estavam no body agora vêm para cá */
+    display: flex;
+    flex-direction: column;
+}
 
 /* PARA NÃO QUEBRAR O 'BOTÃO' LOGIN TRANSFORMEI ELE NUM LINK <a> */
 a.login-button {
