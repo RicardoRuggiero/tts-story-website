@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
@@ -312,6 +312,14 @@ body {
     .welcome-title {
         font-size: 1.75rem;
     }
+}
+
+
+/* PARA NÃO QUEBRAR O 'BOTÃO' LOGIN TRANSFORMEI ELE NUM LINK <a> */
+a.login-button {
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Garante que o padding funcione corretamente */
+    text-align: center; /* Centraliza o texto, caso o 'button' estivesse fazendo isso */
 }
 
 /*
