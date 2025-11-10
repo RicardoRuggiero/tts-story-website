@@ -2,6 +2,9 @@
 const togglePassword = document.getElementById('togglePassword');
 const passwordInput = document.getElementById('passwordInput');
 
+// Selecionar o botão de ação principal
+const mainButton = document.querySelector('.login-button');
+
 togglePassword.addEventListener('click', function() {
     const type = passwordInput.type === 'password' ? 'text' : 'password';
     passwordInput.type = type;
@@ -14,14 +17,23 @@ togglePassword.addEventListener('click', function() {
 const tabs = document.querySelectorAll('.tab');
 tabs.forEach(tab => {
     tab.addEventListener('click', function() {
+        // Primeiro, limpa a classe 'active' de todas as abas
         tabs.forEach(t => t.classList.remove('active'));
+        
+        // Adiciona 'active' apenas na aba clicada
         this.classList.add('active');
+
+        // Lógica para mudar o texto do botão 
+        // Verifica o texto da aba que foi clicada (removendo espaços em branco)
+        if (this.textContent.trim() === 'Cadastro') {
+            mainButton.textContent = 'Cadastrar';
+        } else {
+            mainButton.textContent = 'Login';
+        }
     });
 });
 
-/* 
-  @@@@@@@@@@@@@@@@(Este é o script do novo background)/////////////////////
-*/
+/* @@@@@@@@@@@@@@@@(Este é o script do novo background PARTICULAASSS)/////////////////////*/
 
 // Create particle effect
 const particlesContainer = document.getElementById('particles-container');
@@ -93,7 +105,7 @@ if (particlesContainer) { // Verifica se o container existe
         }, delay * 1000);
     }
     
-    // Mouse interaction
+    // Mouse interaction BOLINHAS
     document.addEventListener('mousemove', (e) => {
         // Create particles at mouse position
         const mouseX = (e.clientX / window.innerWidth) * 100;
