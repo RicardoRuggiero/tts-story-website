@@ -50,3 +50,13 @@ O projeto focou em manter o CSS limpo e reutilizável (princípio D.R.Y. - Don't
 * **CSS Unificado:** As páginas `settings.html` e `preferences.html` utilizam **exatamente o mesmo arquivo CSS** (`settings.css`). O estilo muda contextualmente (ex: qual item de menu está `.active`), mas a base de código é a mesma, facilitando a manutenção.
 * **Navegação Simulada (Frontend-Only):** Para simular um fluxo de login sem *backend*, usamos tags `<a>` (links) estilizadas para parecerem exatamente como botões (`<button>`), permitindo a navegação entre as páginas estáticas.
 * **Estilização de Elementos Nativos:** Foram criados estilos personalizados para elementos HTML que são notoriamente difíceis de customizar, como os menus dropdown (`<select>`) e os botões "toggle" (criados a partir de `<input type="checkbox">`), para que se alinhassem perfeitamente à identidade visual (UI) do design.
+
+
+
+    <!-- importar as bibliotecas primeiro -->
+
+    <!-- importar os meus scripts depois das bibliotecas -->
+    https://github.com/romuloreis/DWDM/blob/master/sticky_navigation.md
+
+
+<!-- http://imakewebthings.com/waypoints/guides/getting-started/ -->
