@@ -53,10 +53,9 @@ O projeto focou em manter o CSS limpo e reutilizável (princípio D.R.Y. - Don't
 
 
 
-    <!-- importar as bibliotecas primeiro -->
+    <!-- importar as bibliotecas primeiro 
 
-    <!-- importar os meus scripts depois das bibliotecas -->
+    importar os meus scripts depois das bibliotecas 
     https://github.com/romuloreis/DWDM/blob/master/sticky_navigation.md
 
-
-<!-- http://imakewebthings.com/waypoints/guides/getting-started/ -->
+    http://imakewebthings.com/waypoints/guides/getting-started/ -->
