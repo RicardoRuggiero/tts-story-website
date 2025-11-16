@@ -187,11 +187,21 @@ h1 {
     font-size: 1.125rem;
 }
 
+/*  repeat(): Cria uma série de colunas com o mesmo padrão.
+    auto-fit: O número de colunas é determinado automaticamente pelo
+espaço disponível no contêiner. As colunas se ajustam para preencher o espaço
+    minmax(px,fr):Define o tamanho de cada coluna: elas terão
+no mínimo 300 pixels de largura e no máximo 1 fração
+do espaço disponível restante (1fr).
+Se houver espaço suficiente, o browser criará o máximo
+de colunas de 300px que couberem; se sobrar espaço, ele será distribuído entre as colunas. */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+/* Define o espaçamento (gutter) entre as linhas e as colunas (separação entre os itens de grade).
+O valor de 2rem significa que a separação será de duas vezes o tamanho da fonte raiz (font-size). */
 
 .feature-card {
     background: rgba(255, 255, 255, 0.03);
