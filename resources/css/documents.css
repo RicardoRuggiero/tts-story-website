@@ -353,6 +353,12 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
+/* abrir em nova aba a img do css */
+.screenshot-container a {
+    text-decoration: none;
+    cursor: zoom-in;       /*  muda o cursor */
+}
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
