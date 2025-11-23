@@ -1,0 +1,372 @@
+/* Reset e Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f1117;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+.back-btn {
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    color: #ffffff;
+    padding: 0.65rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(91, 122, 255, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+    color: #9ca3af;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+/* Progress Bar */
+.progress-section {
+    margin-bottom: 4rem;
+}
+
+.progress-label {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #1a1d2e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #5b7aff 0%, #3d5bff 100%);
+    width: 40%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Tutorial Steps */
+.tutorial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.tutorial-step {
+    margin-bottom: 4rem;
+}
+
+.step-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: #9ca3af;
+    line-height: 1.6;
+}
+
+/* Media Containers */
+.media-container {
+    background: #1a1d2e;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.media-label {
+    color: #9ca3af;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+/* Waveform Animation (Step 1) */
+.waveform-container {
+    background: linear-gradient(135deg, #0a2e3d 0%, #1a3a45 100%);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 100px;
+}
+
+.waveform-bar {
+    width: 3px;
+    background: linear-gradient(180deg, #00d9d9 0%, #00a8a8 100%);
+    border-radius: 2px;
+    animation: wave 1.2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% { height: 20%; }
+    50% { height: 100%; }
+}
+
+/* Editor Preview (Step 2) */
+.editor-preview {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    background: #0f1117;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 250px;
+}
+
+.editor-sidebar {
+    background: #1a1d2e;
+    padding: 1.5rem 1rem;
+}
+
+.editor-content {
+    background: #242731;
+    padding: 2rem;
+    color: #9ca3af;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.import-btn {
+    background: #3a3d4a;
+    color: #ffffff;
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Avatar Preview (Step 3) */
+.avatar-container {
+    background: #0f1117;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+.avatar-placeholder {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #1a2332 0%, #242d3d 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 3rem;
+}
+
+/* Audio Editor Preview (Step 4) */
+.audio-editor {
+    background: #0f1117;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.waveform-editor {
+    background: #1a1d2e;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    min-height: 150px;
+    position: relative;
+}
+
+.waveform-display {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100px;
+    gap: 2px;
+}
+
+.waveform-segment {
+    flex: 1;
+    background: #00d9d9;
+    opacity: 0.6;
+    border-radius: 2px 2px 0 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.editor-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: #1a1d2e;
+    border-radius: 8px;
+}
+
+.control-btn {
+    width: 36px;
+    height: 36px;
+    background: #2a2d3a;
+    border: none;
+    border-radius: 6px;
+    color: #9ca3af;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn.play {
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    color: #ffffff;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.cta-btn {
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    color: #ffffff;
+    padding: 1.25rem 3rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(91, 122, 255, 0.4);
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(91, 122, 255, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        padding: 1.5rem;
+    }
+
+    .hero-section {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.25rem;
+    }
+
+    .tutorial-container {
+        padding: 0 1.5rem 4rem;
+    }
+
+    .editor-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .step-header {
+        gap: 1rem;
+    }
+}
