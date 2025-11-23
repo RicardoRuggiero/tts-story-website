@@ -359,10 +359,74 @@ body {
     cursor: zoom-in;       /*  muda o cursor */
 }
 
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/*Coluna direita (DESKTOP)*/
+/* .right-rail {
+  width: 200px;
+  position: fixed;
+  right: 1.5rem;
+  top: 6.5rem;
+  bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  z-index: 90;
+}
+
+.stacked-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.rail-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.rail-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.45);
+} */
+
+/*Versão MOBILE — imagens abaixo do conteúdo*/
+/* .mobile-images {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+
+  .right-rail {
+    display: none;
+  }
+
+  .mobile-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 1rem 4rem 1rem;
+  }
+
+  .mobile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
+} */
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
 @media (max-width: 768px) {
     .sidebar {
         transform: translateX(-100%);
-        /* Adicionar uma classe .is-open para exibir no mobile (via JS) seria o próximo passo */
+/* Adicionar uma classe .is-open para exibir no mobile (via JS) seria o próximo passo */
     }
 
     .main-content {
