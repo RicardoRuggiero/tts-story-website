@@ -275,25 +275,23 @@ body {
 /* ====================
    FOOTER STYLES
    ==================== */
+
 footer {
     margin-top: 6rem;
     padding: 3rem 2rem 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
 }
 
 .footer-nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 2rem;
 }
 
 .footer-nav a {
-    color: #9ca3af;
+    color: #a0aec0;
     text-decoration: none;
-    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
@@ -309,18 +307,17 @@ footer {
 }
 
 .social-links a {
-    color: #9ca3af;
+    color: #a0aec0;
     font-size: 1.25rem;
     transition: color 0.3s ease;
-    text-decoration: none;
 }
 
 .social-links a:hover {
     color: #5b7aff;
-    transform: translateY(-2px);
 }
 
 .copyright {
+    text-align: center;
     color: #6b7280;
     font-size: 0.875rem;
 }
