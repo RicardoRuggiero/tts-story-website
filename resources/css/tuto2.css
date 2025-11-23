@@ -282,6 +282,7 @@ body {
     background: #00d9d9;
     opacity: 0.6;
     border-radius: 2px 2px 0 0;
+/* ANIMAÇÃO */
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -312,9 +313,15 @@ body {
     justify-content: center;
 }
 
-.control-btn.play {
+/* .control-btn.play {
     background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
     color: #ffffff;
+} */
+.control-btn.active {
+    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    color: #ffffff;
+    transform: scale(1.05); /* Um pequeno zoom para indicar seleção */
+    box-shadow: 0 4px 12px rgba(91, 122, 255, 0.3);
 }
 
 /* CTA Section */
