@@ -1,18 +1,23 @@
-/* Reset e Estilos Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- ADICIONE ESTE BLOCO HTML --- */
+html {
+    /* Garante que o sticky tenha referência de rolagem */
+    scroll-behavior: smooth;
+    overflow-y: visible;
 }
 
+/* --- ATUALIZE O BLOCO BODY --- */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: #0f1117;
     color: #ffffff;
     min-height: 100vh;
+    
+    /* A MÁGICA: Overflow-x hidden previne rolagem lateral, 
+       mas overflow-y visível permite o sticky funcionar */
+    overflow-x: hidden; 
+    overflow-y: visible; 
 }
 
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -59,7 +64,6 @@ body {
     box-shadow: 0 8px 20px rgba(91, 122, 255, 0.4);
 }
 
-/* Hero Section */
 .hero-section {
     max-width: 900px;
     margin: 0 auto;
@@ -79,18 +83,21 @@ body {
     margin-bottom: 3rem;
 }
 
-/* Progress Bar */
 .progress-section {
-    position: sticky; /* O segredo do efeito */
-    top: 0;           /* Cola no topo */
-    z-index: 1000;    /* Fica acima de tudo */
+    /* Comportamento */
+    position: -webkit-sticky; /* Para compatibilidade com Safari antigo */
+    position: sticky;         /* Padrão moderno */
+    top: 0;                   /* Cola no topo exato (0px) */
+    z-index: 1000;            /* Fica por cima de tudo */
     
-    background-color: #0f1117; /* Cor do fundo igual ao site */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+    /* Visual */
+    background-color: #0f1117;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
     
-    padding: 1rem 0;     /* Espaço interno (altura da barra) */
-    margin-bottom: 4rem; /* Empurra o conteúdo do tutorial para baixo */
-    width: 100%;         /* Garante que a faixa preta cubra a tela toda */
+    /* Espaçamento */
+    padding: 1rem 0;
+    margin-bottom: 4rem;
 }
 
 .progress-label {
@@ -123,7 +130,6 @@ body {
     transition: width 0.3s ease;
 }
 
-/* Tutorial Steps */
 .tutorial-container {
     max-width: 900px;
     margin: 0 auto;
@@ -165,7 +171,6 @@ body {
     line-height: 1.6;
 }
 
-/* Media Containers */
 .media-container {
     background: #1a1d2e;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -181,7 +186,7 @@ body {
     font-weight: 500;
 }
 
-/* Waveform Animation (Step 1) */
+/* <<<- Waveform Animation ->>>*/
 .waveform-container {
     background: linear-gradient(135deg, #0a2e3d 0%, #1a3a45 100%);
     border-radius: 12px;
@@ -212,7 +217,7 @@ body {
     50% { height: 100%; }
 }
 
-/* Editor Preview (Step 2) */
+/* <<<- Waveform Animation ->>> Editor Preview */
 .editor-preview {
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -247,7 +252,7 @@ body {
     margin-top: 1rem;
 }
 
-/* Avatar Preview (Step 3) */
+/* Avatar Preview */
 .avatar-container {
     background: #0f1117;
     border-radius: 12px;
@@ -270,7 +275,7 @@ body {
     font-size: 3rem;
 }
 
-/* Audio Editor Preview (Step 4) */
+/* Audio Editor Preview */
 .audio-editor {
     background: #0f1117;
     border-radius: 12px;
@@ -330,18 +335,13 @@ body {
     justify-content: center;
 }
 
-/* .control-btn.play {
-    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
-    color: #ffffff;
-} */
 .control-btn.active {
     background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
     color: #ffffff;
-    transform: scale(1.05); /* Um pequeno zoom para indicar seleção */
+    transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(91, 122, 255, 0.3);
 }
 
-/* CTA Section */
 .cta-section {
     text-align: center;
     padding: 4rem 2rem;
@@ -368,7 +368,6 @@ body {
     box-shadow: 0 12px 32px rgba(91, 122, 255, 0.5);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .header {
         padding: 1.5rem;
