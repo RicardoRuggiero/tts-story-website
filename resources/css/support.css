@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    background: #f8f8fb;
+    color: #333;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.header {
+    background: linear-gradient(135deg, #6f8fff, #99b3ff);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem 3rem;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.title {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.support-grid {
+    margin-top: -50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.support-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 13px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.support-card h2 {
+    margin-top: 0;
+}
+
+.section {
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 1rem 1.2rem;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 1px solid #e5e5ee;
+}
+
+.faq-item summary {
+    font-weight: 600;
+}
+
+.ticket-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.ticket-form input,
+.ticket-form select,
+.ticket-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: 1px solid #cfd3e1;
+    font-size: 1rem;
+}
+
+.ticket-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.button {
+    background: #6f8fff;
+    color: white;
+    padding: 0.8rem 1.4rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s;
+    width: max-content;
+}
+
+.button:hover {
+    background: #5c7af0;
+}
+
+.docs-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.docs-list li {
+    margin-bottom: 0.7rem;
+}
+
+.docs-list a {
+    color: #4a63e7;
+    text-decoration: none;
+}
+
+.docs-list a:hover {
+    text-decoration: underline;
+}
+
+.community-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.community-card {
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: inherit;
+    transition: 0.2s;
+}
+
+.community-card:hover {
+    transform: translateY(-3px);
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    opacity: 0.7;
+}
