@@ -1,11 +1,14 @@
-/* Variável da altura do header */
+/* Variável para sincronizar a altura do header */
 :root {
-    --header-height: 88px; /* valor aproximado; ajuste se necessário */
+    /* Ajuste este valor se mudar o padding do header */
+    --header-height: 90px; 
 }
 
+/* --- CONFIGURAÇÃO DE ROLAGEM --- */
 html {
     scroll-behavior: smooth;
-    overflow-y: visible;
+    /* Permite sticky funcionar corretamente */
+    overflow-y: visible; 
 }
 
 body {
@@ -15,13 +18,25 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     overflow-y: visible;
+    margin: 0;
 }
 
+/* --- HEADER STICKY (Nível 1) --- */
 .header {
+    /* Força a altura para bater com a variável */
+    height: var(--header-height); 
+    
+    /* Lógica Sticky */
+    position: sticky;
+    top: 0;
+    z-index: 1001; /* Fica acima da barra de progresso */
+    
+    /* Visual */
+    background-color: #0f1117; /* Fundo opaco é obrigatório */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
+    padding: 0 3rem; /* Padding ajustado pois definimos height fixa */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -63,11 +78,56 @@ body {
     box-shadow: 0 8px 20px rgba(91, 122, 255, 0.4);
 }
 
+/* --- PROGRESS BAR STICKY (Nível 2) --- */
+.progress-section {
+    /* Lógica Sticky */
+    position: sticky;
+    top: var(--header-height); /* Gruda EXATAMENTE onde o header termina */
+    z-index: 1000;
+    
+    /* Visual */
+    background-color: #0f1117; /* Fundo opaco */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para separar do conteúdo */
+}
+
+.progress-container-limit {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.progress-label {
+    color: #9ca3af;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #1a1d2e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 1%; /* Inicia quase zerado */
+    background: linear-gradient(90deg, #5b7aff, #3d5bff);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* --- RESTO DO CONTEÚDO --- */
 .hero-section {
     max-width: 900px;
     margin: 0 auto;
-    /* Topo: 4rem | Laterais: 2rem | Base: 3rem (Aumentado para não grudar) */
-    padding: 4rem 2rem 2rem;
+    padding: 2rem 2rem 2rem; /* Reduzi o padding top pois o header já ocupa espaço */
 }
 
 .hero-title {
@@ -82,45 +142,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.progress-section {
-    position: sticky;
-    top: var(--header-height); /* Não fica atrás do header */
-    z-index: 1000;
-    background-color: #0f1117;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    width: 100%;
-    padding: 1rem 0;
-}
-
-.progress-container-limit {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.progress-label {
-    color: #9ca3af;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 6px;
-    background: #1a1d2e;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 2%;
-    background: linear-gradient(90deg, #5b7aff, #3d5bff);
-    border-radius: 10px;
-    transition: width 0.3s ease;
-}
-
+/* Tutorial Steps */
 .tutorial-container {
     max-width: 900px;
     margin: 0 auto;
@@ -162,6 +184,7 @@ body {
     line-height: 1.6;
 }
 
+/* Media Containers */
 .media-container {
     background: #1a1d2e;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -177,7 +200,7 @@ body {
     font-weight: 500;
 }
 
-/* <<<- Waveform Animation ->>>*/
+/* Waveform Animation */
 .waveform-container {
     background: linear-gradient(135deg, #0a2e3d 0%, #1a3a45 100%);
     border-radius: 12px;
@@ -208,7 +231,7 @@ body {
     50% { height: 100%; }
 }
 
-/* <<<- Waveform Animation ->>> Editor Preview */
+/* Editor Preview */
 .editor-preview {
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -266,7 +289,7 @@ body {
     font-size: 3rem;
 }
 
-/* Audio Editor Preview */
+/* Audio Editor */
 .audio-editor {
     background: #0f1117;
     border-radius: 12px;
@@ -295,7 +318,6 @@ body {
     background: #00d9d9;
     opacity: 0.6;
     border-radius: 2px 2px 0 0;
-/* ANIMAÇÃO */
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -359,13 +381,14 @@ body {
     box-shadow: 0 12px 32px rgba(91, 122, 255, 0.5);
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
     .header {
-        padding: 1.5rem;
+        padding: 0 1.5rem;
     }
 
     .hero-section {
-        padding: 3rem 1.5rem 2rem;
+        padding: 2rem 1.5rem 2rem;
     }
 
     .hero-title {
