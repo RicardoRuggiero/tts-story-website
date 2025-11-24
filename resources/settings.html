@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoryApp - Configurações de Conta</title>
-    <link rel="icon" href="../resources/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../resources/css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    
     <aside class="sidebar">
         <div class="logo">
             <a href="../index.html" class="logo-icon">tts</a>
@@ -40,7 +41,7 @@
                     <line x1="9" y1="8" x2="15" y2="8"></line>
                     <line x1="17" y1="16" x2="23" y2="16"></line>
                 </svg>
-                <span>Proferências</span>
+                <span>Preferências</span>
             </a>
             <a href="#" class="nav-item">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -78,64 +79,88 @@
             </a>
         </div>
     </aside>
-    <main class="main-content">
-        <h1 class="page-title">Configurações de Conta</h1>
-        <section class="settings-section">
-            <h2 class="section-title">Informações de Perfil</h2>
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="form-label" for="fullName">Nome Completo</label>
-                    <input type="text" class="form-input" value="Ricardo Ruggiero" id="fullName">
+
+    <div class="content-wrapper">
+        <main class="main-content">
+            <h1 class="page-title">Configurações de Conta</h1>
+            
+            <section class="settings-section">
+                <h2 class="section-title">Informações de Perfil</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="fullName">Nome Completo</label>
+                        <input type="text" class="form-input" value="Ricardo Ruggiero" id="fullName">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="emailAddress">Email</label>
+                        <input type="email" class="form-input" value="Ricardo.R@email.com" id="emailAddress">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="form-label" for="emailAddress">Email</label>
-                    <input type="email" class="form-input" value="Ricardo.R@email.com" id="emailAddress">
+            </section>
+
+            <section class="settings-section">
+                <h2 class="section-title">Senha</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="currentPassword">Senha Atual</label>
+                        <input type="password" class="form-input" value="............" id="currentPassword">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="newPassword">Nova Senha</label>
+                        <input type="password" class="form-input" placeholder="Enter new password" id="newPassword">
+                    </div>
                 </div>
+                <div class="button-container">
+                    <button class="btn btn-primary">Mudar Senha</button>
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2 class="section-title">Assinatura</h2>
+                <div class="subscription-card">
+                    <div class="subscription-info">
+                        <span class="subscription-label">Plano Atual</span>
+                        <span class="subscription-plan">Pro Creator</span>
+                    </div>
+                    <div class="subscription-details">
+                        <span>Próxima fatura em: <strong>1 de jan, 2025</strong></span>
+                        <span>Caracteres usados: <strong>150,000 / 500,000</strong></span>
+                    </div>
+                    <button class="btn btn-secondary">Gerenciar Assinatura</button>
+                </div>
+            </section>
+
+            <section class="danger-zone">
+                <h2 class="danger-title">Zona de Perigo</h2>
+                <div class="danger-content">
+                    <div class="danger-text">
+                        <span class="danger-heading">Excluir sua conta</span>
+                        <span class="danger-description">Após excluir sua conta, não há como reverter. Tenha certeza.</span>
+                    </div>
+                    <button class="btn btn-danger">Excluir Conta</button>
+                </div>
+            </section>
+            
+            <div class="save-changes-btn">
+                <button class="btn btn-primary">Salvar Alterações</button>
             </div>
-        </section>
-        <section class="settings-section">
-            <h2 class="section-title">Senha</h2>
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="form-label" for="currentPassword">Senha Atual</label>
-                    <input type="password" class="form-input" value="............" id="currentPassword">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="newPassword">Nova Senha</label>
-                    <input type="password" class="form-input" placeholder="Enter new password" id="newPassword">
-                </div>
+        </main>
+
+        <footer>
+            <nav class="footer-nav">
+                <a href="/tts-story-website/resources/tutorial.html">Sobre</a>
+                <a href="/tts-story-website/resources/vendas.html">Preços</a>
+                <a href="#contact">Contatos</a>
+                <a href="#terms">Termos de Serviço</a>
+                <a href="#privacy">Política de Privacidade</a>
+            </nav>
+            <div class="social-links">
+                <a href="#twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
-            <div class="button-container">
-                <button class="btn btn-primary">Mudar Senha</button>
-            </div>
-        </section>
-        <section class="settings-section">
-            <h2 class="section-title">Assinatura</h2>
-            <div class="subscription-card">
-                <div class="subscription-info">
-                    <span class="subscription-label">Plano Atual</span>
-                    <span class="subscription-plan">Pro Creator</span>
-                </div>
-                <div class="subscription-details">
-                    <span>Próxima fatura em: <strong>1 de jan, 2025</strong></span>
-                    <span>Caracteres usados: <strong>150,000 / 500,000</strong></span>
-                </div>
-                <button class="btn btn-secondary">Gerenciar Assinatura</button>
-            </div>
-        </section>
-        <section class="danger-zone">
-            <h2 class="danger-title">Zona de Perigo</h2>
-            <div class="danger-content">
-                <div class="danger-text">
-                    <span class="danger-heading">Excluir sua conta</span>
-                    <span class="danger-description">Após excluir sua conta, não há como reverter. Tenha certeza.</span>
-                </div>
-                <button class="btn btn-danger">Excluir Conta</button>
-            </div>
-        </section>
-        <div class="save-changes-btn">
-            <button class="btn btn-primary">Salvar Alterações</button>
-        </div>
-    </main>
+            <p class="copyright">© 2025 TTS-Story-App. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>
