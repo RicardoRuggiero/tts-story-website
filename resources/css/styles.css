@@ -118,6 +118,18 @@ body {
 .waveform-bar:nth-child(10) { animation-delay: 0.3s; }
 .waveform-bar:nth-child(11) { animation-delay: 0.2s; }
 .waveform-bar:nth-child(12) { animation-delay: 0.1s; }
+.waveform-bar:nth-child(13) { animation-delay: 0s; }
+.waveform-bar:nth-child(14) { animation-delay: 0.1s; }
+.waveform-bar:nth-child(15) { animation-delay: 0.2s; }
+.waveform-bar:nth-child(16) { animation-delay: 0.3s; }
+.waveform-bar:nth-child(17) { animation-delay: 0.4s; }
+.waveform-bar:nth-child(18) { animation-delay: 0.5s; }
+.waveform-bar:nth-child(19) { animation-delay: 0.6s; }
+.waveform-bar:nth-child(20) { animation-delay: 0.5s; }
+.waveform-bar:nth-child(21) { animation-delay: 0.4s; }
+.waveform-bar:nth-child(22) { animation-delay: 0.3s; }
+.waveform-bar:nth-child(23) { animation-delay: 0.2s; }
+.waveform-bar:nth-child(24) { animation-delay: 0.1s; }
 
 
 .hero-content {
