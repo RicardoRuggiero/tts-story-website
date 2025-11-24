@@ -1,14 +1,14 @@
 /* Variável para sincronizar a altura do header */
 :root {
-    /* Ajuste este valor se mudar o padding do header */
     --header-height: 90px; 
 }
 
 /* --- CONFIGURAÇÃO DE ROLAGEM --- */
 html {
     scroll-behavior: smooth;
-    /* Permite sticky funcionar corretamente */
+/* Essencial para o position: STICKY funcionar */
     overflow-y: visible; 
+
 }
 
 body {
@@ -21,22 +21,18 @@ body {
     margin: 0;
 }
 
-/* --- HEADER STICKY (Nível 1) --- */
+/* --- HEADER STICKY --- */
 .header {
-    /* Força a altura para bater com a variável */
     height: var(--header-height); 
-    
-    /* Lógica Sticky */
     position: sticky;
     top: 0;
     z-index: 1001; /* Fica acima da barra de progresso */
     
-    /* Visual */
-    background-color: #0f1117; /* Fundo opaco é obrigatório */
+    background-color: #0f1117;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3rem; /* Padding ajustado pois definimos height fixa */
+    padding: 0 3rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -78,20 +74,18 @@ body {
     box-shadow: 0 8px 20px rgba(91, 122, 255, 0.4);
 }
 
-/* --- PROGRESS BAR STICKY (Nível 2) --- */
+/* --- PROGRESS BAR STICKY --- */
 .progress-section {
-    /* Lógica Sticky */
     position: sticky;
-    top: var(--header-height); /* Gruda EXATAMENTE onde o header termina */
+    top: var(--header-height); /* Gruda logo abaixo do header */
     z-index: 1000;
     
-    /* Visual */
-    background-color: #0f1117; /* Fundo opaco */
+    background-color: #0f1117;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     width: 100%;
     padding: 1rem 0;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para separar do conteúdo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .progress-container-limit {
@@ -117,17 +111,16 @@ body {
 
 .progress-fill {
     height: 100%;
-    width: 1%; /* Inicia quase zerado */
+    width: 2%; /* Inicia quase zerado */
     background: linear-gradient(90deg, #5b7aff, #3d5bff);
     border-radius: 10px;
     transition: width 0.3s ease;
 }
 
-/* --- RESTO DO CONTEÚDO --- */
 .hero-section {
     max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 2rem 2rem; /* Reduzi o padding top pois o header já ocupa espaço */
+    padding: 2rem 2rem 2rem;
 }
 
 .hero-title {
@@ -184,7 +177,6 @@ body {
     line-height: 1.6;
 }
 
-/* Media Containers */
 .media-container {
     background: #1a1d2e;
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -231,7 +223,6 @@ body {
     50% { height: 100%; }
 }
 
-/* Editor Preview */
 .editor-preview {
     display: grid;
     grid-template-columns: 180px 1fr;
@@ -266,7 +257,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Avatar Preview */
 .avatar-container {
     background: #0f1117;
     border-radius: 12px;
@@ -289,7 +279,6 @@ body {
     font-size: 3rem;
 }
 
-/* Audio Editor */
 .audio-editor {
     background: #0f1117;
     border-radius: 12px;
@@ -381,7 +370,6 @@ body {
     box-shadow: 0 12px 32px rgba(91, 122, 255, 0.5);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .header {
         padding: 0 1.5rem;
