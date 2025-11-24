@@ -63,6 +63,7 @@ body {
 .hero-section {
     max-width: 900px;
     margin: 0 auto;
+    /* Topo: 4rem | Laterais: 2rem | Base: 3rem (Aumentado para não grudar) */
     padding: 4rem 2rem 2rem;
 }
 
@@ -80,7 +81,16 @@ body {
 
 /* Progress Bar */
 .progress-section {
-    margin-bottom: 4rem;
+    position: sticky; /* O segredo do efeito */
+    top: 0;           /* Cola no topo */
+    z-index: 1000;    /* Fica acima de tudo */
+    
+    background-color: #0f1117; /* Cor do fundo igual ao site */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória sutil */
+    
+    padding: 1rem 0;     /* Espaço interno (altura da barra) */
+    margin-bottom: 4rem; /* Empurra o conteúdo do tutorial para baixo */
+    width: 100%;         /* Garante que a faixa preta cubra a tela toda */
 }
 
 .progress-label {
@@ -96,12 +106,19 @@ body {
     background: #1a1d2e;
     border-radius: 10px;
     overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress-container-limit {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .progress-fill {
     height: 100%;
     background: linear-gradient(90deg, #5b7aff 0%, #3d5bff 100%);
-    width: 40%;
+    width: 2%;
     border-radius: 10px;
     transition: width 0.3s ease;
 }
