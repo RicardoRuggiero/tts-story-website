@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -17,30 +16,27 @@ body {
     margin: 0 auto;
 }
 
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 3rem;
-    max-width: 2000px;
-    margin: 0 auto;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    font-size: 1.125rem;
-    font-weight: 600;
     text-decoration: none;
     color: inherit;
+    font-size: 1.125rem;
+    font-weight: 600;
 }
 
 .logo-icon {
     width: 32px;
     height: 32px;
-    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    background: linear-gradient(135deg, #5b7aff, #3d5bff);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -59,23 +55,21 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: .3s ease;
     color: #ffffff;
 }
 
 .icon-btn:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .icon-btn.profile {
-    background: linear-gradient(135deg, #5b7aff 0%, #3d5bff 100%);
+    background: linear-gradient(135deg, #5b7aff, #3d5bff);
     border: none;
 }
-/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 .gallery-header {
     text-align: center;
@@ -85,7 +79,7 @@ body {
 .gallery-header h1 {
     font-size: 3rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #ffffff 0%, #b8c5ff 100%);
+    background: linear-gradient(135deg, #ffffff, #b8c5ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -97,7 +91,7 @@ body {
     color: #a0aec0;
 }
 
-
+/* @@@@@@@@@@@@@ GRID  @@@@@@@@@@@@@*/
 .gallery-grid {
     margin-top: 2rem;
     display: grid;
@@ -105,15 +99,14 @@ body {
     gap: 2rem;
 }
 
-
 .gallery-item {
-    background: rgba(255, 255, 255, 0.03); /* vidro suave */
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     overflow: hidden;
-    cursor: pointer;
-    transition: all .3s ease;
     backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: .3s ease;
 }
 
 .gallery-item:hover {
@@ -125,7 +118,6 @@ body {
 .gallery-item img {
     width: 100%;
     display: block;
-    border-radius: 12px;
 }
 
 .modal {
@@ -154,9 +146,8 @@ body {
 
 .modal-caption {
     text-align: center;
-    margin-top: 1rem;
     color: #d1d5db;
-    font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 .modal-close {
@@ -164,20 +155,18 @@ body {
     top: 25px;
     right: 35px;
     font-size: 2.4rem;
-    color: #ffffff;
+    color: #fff;
     cursor: pointer;
-    transition: 0.2s ease;
 }
 
 .modal-close:hover {
-    opacity: .7;
+    opacity: 0.7;
 }
-
 
 footer {
     margin-top: 6rem;
     padding: 3rem 2rem 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-nav {
@@ -190,11 +179,11 @@ footer {
 .footer-nav a {
     color: #a0aec0;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: .3s ease;
 }
 
 .footer-nav a:hover {
-    color: #ffffff;
+    color: #fff;
 }
 
 .social-links {
@@ -207,20 +196,18 @@ footer {
 .social-links a {
     color: #a0aec0;
     font-size: 1.25rem;
-    transition: color 0.3s ease;
+    transition: .3s ease;
 }
 
 .social-links a:hover {
     color: #5b7aff;
 }
 
-.copyright {
+copyright {
     text-align: center;
     color: #6b7280;
-    font-size: 0.875rem;
 }
 
-/* MOBILE */
 @media (max-width: 768px) {
     .gallery-header h1 {
         font-size: 2.3rem;
