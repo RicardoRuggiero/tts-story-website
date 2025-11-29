@@ -1,14 +1,13 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 
-/* Variáveis do tema */
 :root {
-    --bg: #0f1724;
-    --card: #0b1220;
+    /* --bg: #0f1724; */
+    /* --card: #0b1220; */
     --muted: #9aa4b2;
     --accent-1: #7c3aed;
     --accent-2: #06b6d4;
-    --glass: rgba(255,255,255,0.04);
-    --glass-border: rgba(255,255,255,0.05);
+    /* --glass: rgba(255,255,255,0.04); */
+    /* --glass-border: rgba(255,255,255,0.05); */
     --text: #e6eef8;
     --container: 900px;
     font-family: "Inter", sans-serif;
@@ -26,6 +25,8 @@ body {
     margin: 0 auto;
 }
 
+/* ---------------- HEADER ---------------- */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -40,9 +41,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 160px;
-    margin: 0px 0px;
-    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .header-inner { padding: 14px 40px; }
 }
 
 .brand {
@@ -54,6 +56,7 @@ body {
     font-weight: 700;
 }
 
+/* LOGO */
 .logo-icon {
     background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
     padding: 8px;
@@ -68,7 +71,6 @@ body {
     font-weight: 600;
     transition: 0.2s;
 }
-
 .nav a:hover { color: var(--text); }
 
 .btn {
@@ -76,11 +78,18 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.06);
 }
+.btn-ghost { background: transparent; color: var(--text); }
 
-.btn-ghost {
+.menu-toggle {
+    display: none;
     background: transparent;
+    border: none;
+    font-size: 32px;
     color: var(--text);
+    cursor: pointer;
 }
+
+/* ---------------- HERO ---------------- */
 
 .hero-title {
     padding: 70px 0 40px;
@@ -100,70 +109,130 @@ body {
     margin-left: 2px;
 }
 
+/* ---------------- TERMS ---------------- */
+
 .terms {
     padding: 40px 0 80px;
 }
-
 .terms h2 {
     margin-top: 32px;
     margin-bottom: 10px;
     font-size: 1.3rem;
     font-weight: 700;
 }
-
 .terms p {
     margin-bottom: 18px;
     color: var(--muted);
 }
-
 .terms ul {
     margin: 12px 0 24px 20px;
     color: var(--muted);
 }
+.terms li { margin-bottom: 6px; }
 
-.terms li {
-    margin-bottom: 6px;
-}
+/* ---------------- FOOTER ---------------- */
 
 .site-footer {
     border-top: 1px solid rgba(255,255,255,0.05);
-    padding: 24px 0;
+    padding: 28px 0;
     color: var(--muted);
     background: rgba(8,10,14,0.4);
 }
 
 .footer-inner {
+    width: min(92%, var(--container));
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 160px;
-    padding: 0 0px;
-    width: 100%;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
 .footer-links a {
     color: var(--muted);
     text-decoration: none;
-    margin-left: 16px;
+}
+.footer-links a:hover { color: var(--text); }
+
+/* ---------------- BREAKPOINTS ---------------- */
+
+/* LG — telas ≤ 992px */
+@media (max-width: 992px) {
+    .nav a { margin-left: 12px; }
 }
 
-.footer-links a:hover {
-    color: var(--text);
-}
+/* MD — tablets ≤ 768px */
+@media (max-width: 768px) {
 
-@media (max-width: 800px) {
-    .header-inner {
-        flex-direction: column;
-         gap: 10px;
-        }
-    .nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
+    /* REMOVE BLUR + REMOVE FUNDO ESCURO + REMOVE TÍTULO */
+    .site-header {
+        backdrop-filter: none !important;
+        background: transparent !important;
+        border-bottom: none !important;
     }
-    .footer-inner {
+
+    /* Remove o texto "TTS-Story" mas mantém o ícone */
+    .brand-text,
+    .brand sapn,
+    .brand h1 {
+        display: none !important;
+    }
+
+    .menu-toggle { display: block; }
+
+    /* Ajuste geral */
+    .header-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    /* NAV MOBILE */
+    .nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 240px;
+        height: 100vh;
+        background: rgba(12,16,26,0.95);
+        backdrop-filter: blur(10px);
+        padding: 80px 20px;
+        display: flex;
         flex-direction: column;
-        gap: 14px;
-        text-align: center;
+        gap: 18px;
+        transform: translateX(100%);
+        transition: transform 0.25s ease;
+        z-index: 999;
+    }
+
+    .nav.menu-open { transform: translateX(0); }
+
+    .nav a {
+        margin: 0;
+        font-size: 1.1rem;
+        display: block;
+    }
+
+    .hero-title h1 { font-size: 2rem; }
+}
+
+/* SM — mobile ≤ 480px */
+@media (max-width: 480px) {
+
+    .nav { flex-direction: column; }
+
+    .hero-title h1 { font-size: 1.7rem; }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 8px;
     }
 }
