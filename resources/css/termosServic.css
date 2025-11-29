@@ -136,6 +136,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 160px;
+    padding: 0 0px;
+    width: 100%;
 }
 
 .footer-links a {
@@ -149,7 +152,18 @@ body {
 }
 
 @media (max-width: 800px) {
-    .header-inner { flex-direction: column; gap: 10px; }
-    .nav { display: flex; flex-wrap: wrap; gap: 8px; }
-    .footer-inner { flex-direction: column; gap: 14px; text-align: center; }
+    .header-inner {
+        flex-direction: column;
+         gap: 10px;
+        }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .footer-inner {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
 }
