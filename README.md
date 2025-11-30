@@ -92,20 +92,20 @@ git clone https://github.com/RicardoRuggiero/tts-story-website
 ```
 2. Abra o projeto
 
-Basta abrir o arquivo ```index.html``` no navegador.
+Basta abrir o arquivo ```index.html``` no navegador.<br>
 
-# 🌐 Deploy (GitHub Pages)
+# 🌐 Deploy (GitHub Pages)<br>
 
-O projeto já está preparado para ser hospedado no GitHub Pages.
+O projeto já está preparado para ser hospedado no GitHub Pages.<br>
 
 Como publicar:
 
-Vá em ```Settings``` → ```Pages```
-Em ```Build and deployment```, selecione:
-```Source: Deploy from branch```
-Branch: ```main```
-Salve
-Pronto — o GitHub gera automaticamente a URL do site.
+Vá em ```Settings``` → ```Pages```<br>
+Em ```Build and deployment```, selecione:<br>
+```Source: Deploy from branch```<br>
+Branch: ```main```<br>
+Salve<br>
+Pronto — o GitHub gera automaticamente a URL do site.<br>
 
 # 🛠️ Roadmap / Melhorias futuras
 
