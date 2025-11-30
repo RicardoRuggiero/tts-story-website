@@ -9,16 +9,17 @@ body {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1d3a 100%);
     color: #ffffff;
     min-height: 100vh;
+    overflow-x: hidden; /* Evita rolagem  x */
 }
 
-/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 3rem;
-    max-width: 1400px; /* Aumentei um pouco para caber menus */
+    max-width: 1400px;
     margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -39,6 +40,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .nav-menu {
@@ -50,6 +52,7 @@ body {
     color: #a0aec0;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 0.95rem;
 }
 
 .nav-menu a:hover {
@@ -63,13 +66,13 @@ body {
     border-radius: 8px;
     text-decoration: none;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .btn-signup:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Hero */
 .hero-section {
     text-align: center;
     padding: 6rem 2rem 4rem;
@@ -82,6 +85,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
 }
 
 .hero-section p {
@@ -106,10 +110,9 @@ body {
     transform: translateY(-3px);
 }
 
-/* Pricing Section */
 .pricing-section {
     padding: 2rem 2rem 6rem;
-    max-width: 1400px; /* Aumentado para acomodar 4 cards */
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -152,15 +155,16 @@ body {
     font-weight: 700;
 }
 
-/* Grid com 4 Cards */
+/* --- GRID SYSTEM --- */
 .pricing-grid {
     display: grid;
-    /* Ajusta para caber até 4 colunas. Se diminuir a tela, quebra linha */
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    align-items: start;
+    /* Padrão Desktop: 4 colunas iguais */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1.5rem;
+    align-items: start; /* Impede que estiquem para a mesma altura se não quiser */
 }
 
+/* --- CARD STYLES --- */
 .pricing-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -170,6 +174,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%; /* Faz todos terem a mesma altura na linha */
 }
 
 .pricing-card:hover {
@@ -178,11 +183,11 @@ body {
     border-color: rgba(91, 122, 255, 0.4);
 }
 
-/* Card Destacado (Creator) */
+/* Featured Card */
 .pricing-card.featured {
     border: 1px solid #5b7aff;
     background: rgba(91, 122, 255, 0.1);
-    transform: scale(1.05); /* Levemente maior */
+    transform: scale(1.05);
     z-index: 2;
 }
 
@@ -190,9 +195,9 @@ body {
     transform: scale(1.05) translateY(-8px);
 }
 
-/* Card Studio (Novo) */
+/* Studio Card */
 .pricing-card.studio-card {
-    border: 1px solid #8e24aa; /* Roxo para diferenciar */
+    border: 1px solid #8e24aa;
     background: linear-gradient(180deg, rgba(142, 36, 170, 0.1) 0%, rgba(255,255,255,0.03) 100%);
 }
 
@@ -207,9 +212,9 @@ body {
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-weight: 600;
+    white-space: nowrap;
 }
 
-/* Alinhamento Centralizado solicitado */
 .plan-name {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -222,7 +227,7 @@ body {
 }
 
 .price-amount {
-    font-size: 2rem; /* Reduzi um pouco para não quebrar no card de 1500 */
+    font-size: 1.8rem; /* Ajustado para evitar quebra no R$ 1.500 */
     font-weight: 700;
     color: #fff;
 }
@@ -231,7 +236,7 @@ body {
     color: #a0aec0;
 }
 
-/* Botão com Efeito */
+/* --- BUTTONS --- */
 .plan-cta {
     width: 100%;
     padding: 0.8rem;
@@ -244,50 +249,33 @@ body {
     color: #fff;
     transition: 0.3s;
     position: relative;
-    overflow: hidden; /* Importante para o efeito não sair do botão */
+    overflow: hidden;
 }
 
-/* Cores específicas dos botões */
-.pricing-card.featured .plan-cta {
-    background: #5b7aff;
-}
-
+.pricing-card.featured .plan-cta { background: #5b7aff; }
 .pricing-card.studio-card .plan-cta {
     background: linear-gradient(90deg, #8e24aa, #ba68c8);
     box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
 }
 
-.plan-cta:hover {
-    background: #fff;
-    color: #000;
-}
+.plan-cta:hover { background: #fff; color: #000; }
 
-/* ===== EFEITO DE CLIQUE (BRILHO) ===== */
-/* Cria uma barra branca translúcida que passa pelo botão */
+/* Efeito Ripple */
 .plan-cta::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
+    content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
     transition: none;
 }
-
-/* Classe ativada pelo JS ao clicar */
-.plan-cta.animating::after {
-    animation: shine 0.6s ease-out;
-}
+.plan-cta.animating::after { animation: shine 0.6s ease-out; }
 
 @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 100%; }
+    0% { left: -100%; } 100% { left: 100%; }
 }
 
+/* --- FEATURES --- */
 .plan-features {
     list-style: none;
-    flex-grow: 1; /* Empurra o conteúdo para alinhar */
+    flex-grow: 1;
 }
 
 .plan-features li {
@@ -301,14 +289,13 @@ body {
 .feature-icon {
     color: #5b7aff;
     margin-right: 0.8rem;
-    min-width: 20px; /* Alinha os ícones */
+    min-width: 20px;
 }
+.studio-card .feature-icon { color: #d279ee; }
 
-.studio-card .feature-icon {
-    color: #d279ee; /* Ícones roxos no card studio */
-}
-
-/* Footer */
+/* =========================================
+   5. FOOTER
+   ========================================= */
 footer {
     text-align: center;
     padding: 3rem 2rem;
@@ -323,19 +310,31 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-nav a {
-    color: #a0aec0;
-    text-decoration: none;
-}
+.footer-nav a { color: #a0aec0; text-decoration: none; }
+.copyright { color: #6b7280; font-size: 0.9rem; }
 
-.copyright {
-    color: #6b7280;
-    font-size: 0.9rem;
-}
+/* ==========================================================================
+   MEDIA QUERIES (RESPONSIVIDADE 4 NÍVEIS)
+   ========================================================================== */
 
-/* Responsividade */
-@media (max-width: 1100px) {
-    /* Quando a tela fica média, o card de destaque perde o zoom para não quebrar o layout */
+/* [Diagrama Mental da Estratégia]
+   Desktop: 4 colunas
+   Laptop:  2 colunas (2x2)
+   Tablet:  1 coluna (com ajustes de padding)
+   Mobile:  1 coluna (ajustes de fonte)
+*/
+
+/* 1. LAPTOPS / DESKTOPS MÉDIOS (Max: 1200px) */
+@media (max-width: 1200px) {
+    .pricing-grid {
+        /* Muda para 2 colunas. Ideal para 4 itens (2 em cima, 2 em baixo) */
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px; /* Limita a largura para não ficarem muito esticados */
+        margin: 0 auto;
+        gap: 2rem;
+    }
+
+    /* Remove o zoom do card destaque pois em grid 2x2 ele pode sobrepor estranho */
     .pricing-card.featured {
         transform: none;
         z-index: 1;
@@ -345,23 +344,78 @@ footer {
     }
 }
 
+/* 2. TABLETS (Max: 768px) */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        padding: 1rem;
         gap: 1rem;
     }
     
     .nav-menu {
-        display: none; /* Simplificação para mobile */
+        display: none; /* Menu colapsado no mobile */
+    }
+
+    .hero-section {
+        padding: 4rem 1.5rem 2rem;
     }
 
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .pricing-grid {
-        grid-template-columns: 1fr; /* Um card por vez no celular */
-        max-width: 400px;
-        margin: 0 auto;
+        /* Muda para 1 coluna (pilha vertical) */
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        gap: 2.5rem; /* Mais espaço entre os cards verticais */
+    }
+
+    /* Ajuste para o badge "Popular" não cortar */
+    .pricing-card.featured {
+        margin-top: 0.5rem;
+    }
+}
+
+/* 3. MOBILE GRANDE (Max: 500px) */
+@media (max-width: 500px) {
+    .pricing-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .pricing-toggle {
+        flex-direction: column; /* Botões um embaixo do outro se a tela for muito estreita */
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    .toggle-btn {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .save-badge {
+        display: inline-block;
+        margin-top: 4px;
+    }
+}
+
+/* 4. MOBILE PEQUENO (Max: 360px) */
+@media (max-width: 360px) {
+    .logo span {
+        font-size: 1rem;
+    }
+    
+    .price-amount {
+        font-size: 1.5rem;
+    }
+
+    .plan-features li {
+        font-size: 0.85rem;
+    }
+    
+    .btn-signup {
+        width: 100%;
+        text-align: center;
     }
 }
