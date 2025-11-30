@@ -211,7 +211,6 @@ de colunas de 300px que couberem; se sobrar espaço, ele será distribuído entr
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    border: 10px;
 }
 /* Define o espaçamento (gutter) entre as linhas e as colunas (separação entre os itens de grade).
 O valor de 2rem significa que a separação será de duas vezes o tamanho da fonte raiz (font-size). */
@@ -221,6 +220,7 @@ O valor de 2rem significa que a separação será de duas vezes o tamanho da fon
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: .13rem;
+    padding: 3rem;
     transition: all 0.3s ease;
 }
 
