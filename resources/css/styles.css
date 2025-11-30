@@ -211,6 +211,7 @@ de colunas de 300px que couberem; se sobrar espaço, ele será distribuído entr
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    border: 10px;
 }
 /* Define o espaçamento (gutter) entre as linhas e as colunas (separação entre os itens de grade).
 O valor de 2rem significa que a separação será de duas vezes o tamanho da fonte raiz (font-size). */
@@ -353,7 +354,7 @@ footer {
     border-radius: 50%; /* Faz virar bolinha */
     border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transition: transform 0.2s ease, border-color 0.2s;
+    transition: transform 0.75s ease, border-color 0.2s;
     position: relative; /* Para o efeito de riscado funcionar */
 }
 
