@@ -1,4 +1,4 @@
-# !!!@@@ -~~~ ...C O N S T R U Ç Ã O... ~~~- @@@!!!
+# <p align="center">!!!@@@ -~~~ ...C O N S T R U Ç Ã O... ~~~- @@@!!!</p>
 # <br><p align="center">🎧✨ TTS-Story Website</p><br>
 
 <p align="center"> <img width="585" height="427" alt="favicon" src="https://github.com/user-attachments/assets/ce673f31-9d6b-4198-bfab-0592e09030ad" /> </p> 
