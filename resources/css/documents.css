@@ -68,6 +68,17 @@ body {
     color: #ffffff;
 }
 
+.mobile-menu-btn {
+    display: none; /* Padrão: invisível em Desktop */
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    padding: 0.25rem;
+}
+
 .sidebar {
     width: 260px;
     background: #1a1d2e;
@@ -374,8 +385,17 @@ body {
 
 /* 2. TABLETS (Max: 768px) */
 @media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block; /* Torna visível no mobile */
+    }
+    
     .sidebar {
-        transform: translateX(-100%); /* Esconde sidebar */
+        transform: translateX(-100%); /* Estado fechado */
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5); /* Sombra para destaque */
+    }
+
+    .sidebar.active {
+        transform: translateX(0); /* Estado aberto */
     }
 
     .main-content {
