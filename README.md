@@ -1,7 +1,5 @@
-# !!!!@@@@@ ---~~~ ...C O N S T R U Ç Ã O... ~~~--- @@@@@!!!!!
+# !!!@@@@ ---~~~ ...C O N S T R U Ç Ã O... ~~~--- @@@@!!!
 # <p align="center">🎧✨ TTS-Story Website</p>
-
-<p align="center"> <img src="https://media.giphy.com/media/qKmWi9mfycx6E/giphy.gif" alt="GIF Ilustrativo" width="200"></p>
 
 <p align="center"> <img width="585" height="427" alt="favicon" src="https://github.com/user-attachments/assets/ce673f31-9d6b-4198-bfab-0592e09030ad" /> <img src="resources/img/logo.png" width="130" alt="Logo TTS-Story"> </p> 
 
