@@ -105,7 +105,8 @@ body {
     0%, 100% { transform: scaleY(0.3); }
     50% { transform: scaleY(1); }
 }
-
+/* fazer a lógica no .ts ou .js para evitar repetições */
+/* 1 */
 .waveform-bar:nth-child(1) { animation-delay: 0s; }
 .waveform-bar:nth-child(2) { animation-delay: 0.1s; }
 .waveform-bar:nth-child(3) { animation-delay: 0.2s; }
@@ -129,8 +130,7 @@ body {
 .waveform-bar:nth-child(21) { animation-delay: 0.4s; }
 .waveform-bar:nth-child(22) { animation-delay: 0.3s; }
 .waveform-bar:nth-child(23) { animation-delay: 0.2s; }
-.waveform-bar:nth-child(24) { animation-delay: 0.1s; }
-
+.waveform-bar:nth-child(24) { animation-delay: 0.1s; } /* 24 */
 
 .hero-content {
     position: relative;
@@ -297,6 +297,120 @@ footer {
     color: #6b7280;
     font-size: 0.875rem;
 }
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* =========================================
+   SELECTOR DE TEMAS (CSS ADICIONAL)
+   ========================================= */
+
+/* 1. Container Relativo */
+/* Necessário para que o popup (absoluto) fique preso a este botão */
+.theme-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* 2. O Popup (A Janelinha) */
+.theme-popup {
+    /* Dimensões solicitadas */
+    width: 250px;
+    height: 100px;
+    
+    /* Posicionamento */
+    position: absolute;
+    top: 120%; /* Fica logo abaixo do botão com um pequeno espaço */
+    right: 0; /* Alinha à direita do container */
+    
+    /* Estilo Visual */
+    background: rgba(26, 29, 58, 0.95); /* Azul bem escuro, quase opaco */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Sombra forte para destacar */
+    backdrop-filter: blur(10px); /* Efeito de vidro */
+    z-index: 1000; /* Garante que fique por cima de tudo */
+    
+    /* Layout das Bolinhas */
+    display: none; /* Começa escondido */
+    align-items: center;
+    justify-content: space-evenly; /* Espaça as 3 bolinhas igualmente */
+    
+    /* Animação suave ao aparecer */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Classe que o JS vai adicionar para mostrar o menu */
+.theme-popup.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 3. As Bolinhas (Opções) */
+.theme-option {
+    width: 50px; /* Tamanho apropriado para caber em 100px de altura */
+    height: 50px;
+    border-radius: 50%; /* Faz virar bolinha */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s;
+    position: relative; /* Para o efeito de riscado funcionar */
+}
+
+.theme-option:hover {
+    transform: scale(1.1); /* Cresce um pouco ao passar o mouse */
+    border-color: #fff;
+}
+
+/* 4. Cores das Bolinhas */
+
+/* Contraste Escuro (Preto profundo) */
+.theme-darker {
+    background-color: #000000;
+}
+
+/* Tema Atual (Azul do seu body) */
+.theme-current {
+    /* Copiei o gradiente do seu body para representar o atual */
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1d3a 100%);
+}
+
+/* Contraste Claro (Branco/Cinza claro) */
+.theme-lighter {
+    background-color: #f0f0f0;
+}
+
+/* 5. Estado "Inclicável" / Riscado (Tema Ativo) */
+.theme-option.active {
+    cursor: not-allowed; /* Mostra o cursor de bloqueio */
+    opacity: 0.6; /* Deixa meio apagado */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Efeito de Riscado (Linha diagonal) */
+.theme-option.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7); /* Cor do risco */
+    top: 50%;
+    left: 0;
+    transform: rotate(-45deg); /* Gira a linha para riscar */
+}
+
+.theme-option.active:hover {
+    transform: none; /* Não cresce se estiver desativado */
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 6. Ajuste Mobile (Opcional) */
+@media (max-width: 400px) {
+    .theme-popup {
+        right: -50px; /* Ajuste fino se sair da tela em celulares muito pequenos */
+    }
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 
 @media (max-width: 768px) {
     h1 {
