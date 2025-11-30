@@ -72,7 +72,8 @@ tts-story-website/
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c5948108-6b2a-40ae-bbd0-d75db299aa20" />
 -
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eedd557e-c49b-4cf7-8bf6-23e9a2fb6e27" />
-
+-
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ec0536cc-6e64-483a-9c92-bc3366347569" />
 
 # 🧩 Tecnologias Utilizadas
 | Tecnologia             | Uso                                          |
@@ -100,60 +101,39 @@ O projeto já está preparado para ser hospedado no GitHub Pages.
 Como publicar:
 
 Vá em ```Settings``` → ```Pages```
-
 Em ```Build and deployment```, selecione:
-
 ```Source: Deploy from branch```
-
 Branch: ```main```
-
 Salve
-
 Pronto — o GitHub gera automaticamente a URL do site.
 
-🛠️ Roadmap / Melhorias futuras
+# 🛠️ Roadmap / Melhorias futuras
 
- Criar versão mobile totalmente otimizada
-
- Adicionar tema dark/light
-
- Criar animações mais suaves nas transições de páginas
-
- Implementar uma API real (opcional)
-
- Criar sistema real de login usando Node/Python/Go/etc.
+ Criar mais versões mobile totalmente otimizadas <br>
+ Adicionar temas dark/light <br>
+ Criar animações mais suaves nas transições de páginas <br>
+ Implementar uma API real <br>
+ Criar sistema real de login usando C#.
 
 # 🤝 Como contribuir
 
-Fork o repositório
+Fork o repositório<br><br>
+Crie uma branch:<br>
+git checkout -b minha-melhoria<br>
+Faça suas alterações<br>
 
-Crie uma branch:
-
-git checkout -b minha-melhoria
-
-
-Faça suas alterações
-
-Commit:
-
-git commit -m "melhoria: descrição"
-
-
-Envie o Pull Request
-
-Pull requests e sugestões são sempre bem-vindos!
+Commit:<br>
+git commit -m "melhoria: descrição"<br>
+Envie o Pull Request<br>
+Pull requests e sugestões são sempre bem-vindos!<br>
 
 # 📜 Licença
 
-Este projeto está sob a licença MIT — livre para uso, modificação e distribuição.
-Você pode adicionar este arquivo no repositório:
-
-MIT License
-Copyright (...)
+Este projeto está sob a licença '???'<br>
 
 # 👤 Autor
 
 Ricardo Ruggiero
-🔗 GitHub: https://github.com/RicardoRuggiero
+🔗 GitHub: https://github.com/RicardoRuggiero<br>
 
-### 💬 Projetos, estudos e desenvolvimento web.
+### 💬 Projetos, estudos e desenvolvimento web.<br>
