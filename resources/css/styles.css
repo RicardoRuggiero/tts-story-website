@@ -219,7 +219,7 @@ O valor de 2rem significa que a separação será de duas vezes o tamanho da fon
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
+    padding: .13rem;
     transition: all 0.3s ease;
 }
 
