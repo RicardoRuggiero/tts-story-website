@@ -83,6 +83,12 @@ tts-story-website/
 | **JavaScript Vanilla** | Interatividade, eventos, animações simples   |
 | **SVG**                | Ícones leves e personalizáveis               |
 
+## 🛠️ Ferramentas e Tecnologias Utilizadas<br>
+* **Linguagens:** HTML5, CSS3, JavaScript.<br>
+* **Minificação:** [CSS/JS Minifier](https://www.minifier.org/) - Utilizado para otimizar os arquivos de estilo e script para produção.<br>
+* **Ícones:** FontAwesome, deafault.<br>
+* **Fontes:** Google Fonts, FontAwesome.<br>
+
 # 🚀 Como rodar localmente
 
 Não há dependências nem instalação. É um projeto estático.
