@@ -70,6 +70,9 @@ tts-story-website/
 
 ```
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/c5948108-6b2a-40ae-bbd0-d75db299aa20" />
+-
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eedd557e-c49b-4cf7-8bf6-23e9a2fb6e27" />
+
 
 # 🧩 Tecnologias Utilizadas
 | Tecnologia             | Uso                                          |
