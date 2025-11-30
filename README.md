@@ -3,9 +3,9 @@
 
 <p align="center"> <img width="585" height="427" alt="favicon" src="https://github.com/user-attachments/assets/ce673f31-9d6b-4198-bfab-0592e09030ad" /> </p> 
 
-<p align="center"> <b>Interface moderna, responsiva , criada para simular o TTS-Story App. [páginas estáticas] </p><br> 
+<p align="center"> <b>Interface moderna, responsiva , criada para simular o TTS-Story App. [páginas estáticas] </b><br> 
   
-  <sub> <p align="center"> Uma experiência elegante de UI/UX focada em narrativa, acessibilidade e estética. </p> </sub>
+  <sub> Uma experiência elegante de UI/UX focada em narrativa, acessibilidade e estética.</sub>
 </p>
 
 <p align="center"> <img src="https://img.shields.io/badge/status-online-brightgreen?style=for-the-badge"> <img src="https://img.shields.io/badge/type-frontend-blue?style=for-the-badge"> <img src="https://img.shields.io/badge/tech-HTML%20CSS%20JS-orange?style=for-the-badge"> <img src="https://img.shields.io/github/last-commit/RicardoRuggiero/tts-story-website?style=for-the-badge"> 
