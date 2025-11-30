@@ -438,6 +438,15 @@ body {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
+        align-items: center;
+    }
+
+    .mobile-menu-btn {
+        /* Sobrescreve o alinhamento central apenas para este botão */
+        align-self: flex-start; 
+        /* Opcional: remove margem extra se houver */
+        margin-right: 0;
+        margin-left: 0.5rem; /* Um pequeno respiro da borda se quiser */
     }
 
     .top-nav {
