@@ -272,7 +272,6 @@ body {
     0% { left: -100%; } 100% { left: 100%; }
 }
 
-/* --- FEATURES --- */
 .plan-features {
     list-style: none;
     flex-grow: 1;
@@ -293,9 +292,6 @@ body {
 }
 .studio-card .feature-icon { color: #d279ee; }
 
-/* =========================================
-   5. FOOTER
-   ========================================= */
 footer {
     text-align: center;
     padding: 3rem 2rem;
@@ -316,14 +312,12 @@ footer {
 /* ==========================================================================
    MEDIA QUERIES (RESPONSIVIDADE 4 NÍVEIS)
    ========================================================================== */
-
-/* [Diagrama Mental da Estratégia]
+/* [Diagrama da Estratégia]
    Desktop: 4 colunas
    Laptop:  2 colunas (2x2)
    Tablet:  1 coluna (com ajustes de padding)
    Mobile:  1 coluna (ajustes de fonte)
 */
-
 /* 1. LAPTOPS / DESKTOPS MÉDIOS (Max: 1200px) */
 @media (max-width: 1200px) {
     .pricing-grid {
@@ -333,7 +327,7 @@ footer {
         margin: 0 auto;
         gap: 2rem;
     }
-
+    
     /* Remove o zoom do card destaque pois em grid 2x2 ele pode sobrepor estranho */
     .pricing-card.featured {
         transform: none;
