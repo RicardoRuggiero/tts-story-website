@@ -57,25 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'current';
     }
 
-    // Função para aplicar as cores (Exemplo Básico)
+    // Função para aplicar as cores usando Classes CSS (MUITO MELHOR)
     function applyTheme(type) {
         const body = document.body;
         
-        // Remove classes antigas (se houver)
-        body.classList.remove('theme-mode-darker', 'theme-mode-lighter');
+        // 1. Limpa estilos inline antigos (caso existam de versões anteriores)
+        body.style.background = '';
+        body.style.color = '';
 
-        // Aplica a nova classe baseada na escolha
+        // 2. Remove todas as classes de tema
+        body.classList.remove('theme-mode-darker', 'theme-mode-lighter', 'theme-mode-current');
+
+        // 3. Adiciona a classe correta
         if (type === 'darker') {
-            // Exemplo: fundo preto sólido
-            body.style.background = '#000000';
+            body.classList.add('theme-mode-darker');
+            // Opcional: Se quiser forçar o preto via JS ainda, ou faça no CSS:
+            body.style.background = '#000000'; 
+            
         } else if (type === 'lighter') {
-            // Exemplo: fundo claro
-            body.style.background = '#f0f0f0';
-            body.style.color = '#1a1d3a'; // Ajuste de cor de texto para fundo claro
+            body.classList.add('theme-mode-lighter');
+            
         } else {
-            // Volta para o gradiente padrão (Current)
-            body.style.background = 'linear-gradient(135deg, #0a0e27 0%, #1a1d3a 100%)';
-            body.style.color = '#ffffff';
+            body.classList.add('theme-mode-current');
+            // Remove qualquer estilo inline para voltar ao padrão do CSS
+            body.removeAttribute('style');
         }
     }
 });
