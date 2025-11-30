@@ -9,6 +9,7 @@ body {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1d3a 100%);
     color: #ffffff;
     min-height: 100vh;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 .container {
@@ -21,6 +22,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 3rem;
+    transition: padding 0.3s ease;
 }
 
 .logo {
@@ -41,6 +43,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0; /* Impede o ícone de amassar */
 }
 
 .nav-buttons {
@@ -71,6 +74,76 @@ body {
     border: none;
 }
 
+/* --- TEMA POPUP --- */
+.theme-container { 
+    position: relative; 
+    display: inline-block; 
+}
+
+.theme-popup {
+    width: 250px; 
+    height: 100px;
+    position: absolute; 
+    top: 120%; 
+    right: 0;
+    background: rgba(26, 29, 58, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: none; 
+    align-items: center; 
+    justify-content: space-evenly;
+    opacity: 0; 
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-popup.show { 
+    display: flex; opacity: 1; 
+    transform: translateY(0); 
+}
+
+.theme-option {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer; 
+    transition: transform 0.2s ease; 
+    position: relative;
+}
+
+.theme-option:hover { 
+    transform: scale(1.1); 
+    border-color: #fff; 
+}
+
+.theme-darker { background-color: #000000; }
+.theme-current { 
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1d3a 100%); 
+}
+
+.theme-lighter { background-color: #f0f0f0; }
+
+.theme-option.active { 
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+
+.theme-option.active::after {
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    height: 2px;
+    background-color: rgba(255,255,255,0.7); 
+    top: 50%; 
+    left: 0; 
+    transform: rotate(-45deg);
+}
+
+/* ================= HEADER ================= */
 .gallery-header {
     text-align: center;
     padding: 5rem 1rem 3rem;
@@ -83,6 +156,7 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height: 1.2;
 }
 
 .gallery-header p {
@@ -91,10 +165,12 @@ body {
     color: #a0aec0;
 }
 
-/* @@@@@@@@@@@@@ GRID  @@@@@@@@@@@@@*/
+/* ================= GRID RESPONSIVO ================= */
 .gallery-grid {
     margin-top: 2rem;
     display: grid;
+
+    /* Ajuste automático: O mínimo foi reduzido para 260px */
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
@@ -107,6 +183,8 @@ body {
     backdrop-filter: blur(8px);
     cursor: pointer;
     transition: .3s ease;
+    height: 250px;
+    position: relative;
 }
 
 .gallery-item:hover {
@@ -120,98 +198,153 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 .modal {
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     display: none;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(10px);
-    justify-content: center;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    justify-content: center; align-items: center;
+    flex-direction: column;
     z-index: 9999;
+    padding: 1rem; /* Importante para MOBILE */
 }
-
+ /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .modal-content {
-    max-width: 85%;
-    max-height: 80%;
-    border-radius: 18px;
-    box-shadow: 0 0 30px rgba(59, 91, 255, 0.4);
+    max-width: 90%; 
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
     animation: fadeZoom .3s ease;
+    object-fit: contain;
 }
 
 @keyframes fadeZoom {
-    0% { transform: scale(0.7); opacity: 0; }
+    0% { transform: scale(0.9); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
 }
-
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 .modal-caption {
-    text-align: center;
-    color: #d1d5db;
-    margin-top: 1rem;
+    text-align: center; color: #fff; margin-top: 1rem;
+    font-size: 1rem;
 }
 
 .modal-close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    font-size: 2.4rem;
-    color: #fff;
-    cursor: pointer;
+    position: absolute; top: 20px; right: 30px;
+    font-size: 3rem; color: #fff; cursor: pointer; transition: 0.2s;
+    z-index: 10000;
 }
+.modal-close:hover { color: #5b7aff; }
 
-.modal-close:hover {
-    opacity: 0.7;
-}
 
 footer {
-    margin-top: 6rem;
+    margin-top: 6rem; 
     padding: 3rem 2rem 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer-nav {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    margin-bottom: 2rem;
+.footer-nav { display: flex; justify-content: center; gap: 3rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.footer-nav a { color: #a0aec0; text-decoration: none; transition: .3s ease; }
+.footer-nav a:hover { color: #fff; }
+.social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+.social-links a { color: #a0aec0; font-size: 1.25rem; transition: .3s ease; }
+.social-links a:hover { color: #5b7aff; }
+.copyright { text-align: center; color: #6b7280; font-size: 0.9rem;}
+
+/* ================= MODO CLARO ================= */
+body.theme-mode-lighter {
+    background: #f0f2f5; color: #1a1d3a;
+}
+body.theme-mode-lighter .gallery-header h1 {
+    background: none; -webkit-text-fill-color: initial; color: #fff;
+    text-shadow: 2px 2px 0px #00d9ff, -2px -2px 0px #ff0055, 0px 0px 8px rgba(0,0,0,0.2);
+}
+body.theme-mode-lighter .gallery-item {
+    background: #ffffff; border-color: transparent;
+    box-shadow: 0 10px 30px rgba(91, 122, 255, 0.15);
+}
+body.theme-mode-lighter .gallery-header p,
+body.theme-mode-lighter .footer-nav a,
+body.theme-mode-lighter .social-links a { color: #4a5568; }
+body.theme-mode-lighter .icon-btn {
+    background: #ffffff; color: #5b7aff; border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+body.theme-mode-lighter .navbar {
+    background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-.footer-nav a {
-    color: #a0aec0;
-    text-decoration: none;
-    transition: .3s ease;
+/* ==========================================================================
+   MEDIA QUERIES - 4 NÍVEIS DE TELA
+   ========================================================================== */
+
+/* 1. LAPTOP / DESKTOP PEQUENO (Max: 1024px) */
+@media (max-width: 1024px) {
+    .navbar { padding: 1.5rem 2rem; }
+    .gallery-header h1 { font-size: 2.5rem; }
+    /* Ajusta o grid para garantir que caibam 3 itens se possível */
+    .gallery-grid { gap: 1.5rem; }
 }
 
-.footer-nav a:hover {
-    color: #fff;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.social-links a {
-    color: #a0aec0;
-    font-size: 1.25rem;
-    transition: .3s ease;
-}
-
-.social-links a:hover {
-    color: #5b7aff;
-}
-
-.copyright {
-    text-align: center;
-    color: #6b7280;
-}
-
+/* 2. TABLET (Max: 768px) */
 @media (max-width: 768px) {
-    .gallery-header h1 {
-        font-size: 2.3rem;
+    .navbar { padding: 1rem 1.5rem; }
+    
+    .gallery-header { padding-top: 3rem; }
+    .gallery-header h1 { font-size: 2rem; }
+    
+    /* Footer empilhado */
+    .footer-nav { gap: 1.5rem; }
+    
+    /* Grid ajusta para 2 colunas */
+    .gallery-grid { 
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    }
+    
+    /* Modal */
+    .modal-close { font-size: 2.5rem; top: 15px; right: 20px; }
+}
+
+/* 3. MOBILE GRANDE (Max: 576px) */
+@media (max-width: 576px) {
+    /* Navbar compacta */
+    .logo span { display: none; } /* Esconde o texto do logo para economizar espaço */
+    
+    .gallery-header h1 { font-size: 1.75rem; }
+    .gallery-header p { font-size: 1rem; }
+    
+    /* Grid vira 1 coluna larga ou 2 pequenas dependendo do celular */
+    .gallery-grid { 
+        grid-template-columns: 1fr; /* Força 1 coluna para destaque */
+        gap: 1.5rem;
+    }
+    .gallery-item { height: 220px; }
+    
+    /* Ajuste do Popup de Tema no Mobile */
+    .theme-popup {
+        width: 200px; /* Menor */
+        right: -50px; /* Deslocado para não sair da tela */
+    }
+    .theme-option { width: 40px; height: 40px; }
+}
+
+/* 4. MOBILE PEQUENO (Max: 380px) */
+@media (max-width: 380px) {
+    .navbar { padding: 0.8rem 1rem; }
+    .nav-buttons { gap: 0.5rem; }
+    .icon-btn { width: 38px; height: 38px; }
+    
+    .gallery-header h1 { font-size: 1.5rem; }
+    
+    /* Garante que o popup não estoure a tela */
+    .theme-popup {
+        right: -80px; 
     }
 }

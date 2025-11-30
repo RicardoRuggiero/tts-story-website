@@ -17,10 +17,16 @@
             <span>TTS-Story-App</span>
         </a>
         <div class="nav-buttons">
-            <button class="icon-btn">
-                <i class="fas fa-sun"></i>
-            </button>
-
+            <div class="theme-container">
+                <button class="icon-btn" id="theme-btn" aria-label="Abrir seletor de cores">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="theme-popup" id="theme-popup">
+                    <button class="theme-option theme-darker" aria-label="Tema Escuro"></button>
+                    <button class="theme-option theme-current active" aria-label="Tema Atual" disabled></button>
+                    <button class="theme-option theme-lighter" aria-label="Tema Claro"></button>
+                </div>
+            </div>
             <a href="/tts-story-website/resources/login.html" class="icon-btn profile">
                 <i class="fas fa-user"></i>
             </a>
@@ -33,34 +39,28 @@
     <main class="container">
         <section class="gallery-grid">
             <div class="gallery-item">
-                <img src="../vendors/css/img/img1.jpg" alt="Imagem 1">
+                <img src="../vendors/css/img/img1.jpg" alt="Interface Principal do Usuário">
             </div>
             <div class="gallery-item">
-                <img src="../vendors/css/img/img2.png" alt="Imagem 2">
+                <img src="../vendors/css/img/img2.png" alt="Painel de Edição de Texto">
             </div>
             <div class="gallery-item">
-                <img src="../vendors/css/img/img3.jpg" alt="Imagem 3">
+                <img src="../vendors/css/img/img3.jpg" alt="Visualização da Onda Sonora">
             </div>
             <div class="gallery-item">
-                <img src="../vendors/css/img/img4.jpg" alt="Imagem 4">
+                <img src="../vendors/css/img/img4.jpg" alt="Biblioteca de Vozes">
             </div>
             <div class="gallery-item">
-                <img src="../vendors/css/img/img5.jpg" alt="Imagem 5">
+                <img src="../vendors/css/img/img5.jpg" alt="Exportação de Áudio">
             </div>
             <div class="gallery-item">
-                <img src="../vendors/css/img/img6.png" alt="Imagem 6">
-            </div>
-            <div class="gallery-item">
-                <img src="../vendors/css/img/img7.jpg" alt="Imagem 7">
-            </div>
-            <div class="gallery-item">
-                <img src="../vendors/css/img/img8.jpg" alt="Imagem 8">
+                <img src="../vendors/css/img/img6.png" alt="Configurações de Perfil">
             </div>
         </section>
     </main>
     <div id="modal" class="modal">
         <span id="closeModal" class="modal-close">&times;</span>
-        <img id="modalImg" class="modal-content">
+        <img id="modalImg" class="modal-content" alt="Visualização ampliada">
         <p id="modalCaption" class="modal-caption"></p>
     </div>
     <footer>
@@ -68,23 +68,18 @@
             <a href="/tts-story-website/resources/tutorial.html">Sobre</a>
             <a href="/tts-story-website/resources/vendas.html">Preços</a>
             <a href="/tts-story-website/resources/contact.html">Contatos</a>
-            <a href="/tts-story-website/resources/termosServic.html">Termos de Serviço</a>
-            <a href="/tts-story-website/resources/privacy.html">Política de Privacidade</a>
+            <a href="/tts-story-website/resources/termosServic.html">Termos</a>
+            <a href="/tts-story-website/resources/privacy.html">Privacidade</a>
             <a href="/tts-story-website/resources/support.html">Suporte</a>
         </nav>
         <div class="social-links">
-            <a href="https://x.com/?lang=pt" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
         <p class="copyright">© 2025 TTS-Story-App. Todos os direitos reservados.</p>
     </footer>
+    <script src="../resources/js/index.js"></script>
     <script src="../resources/js/gallery.js"></script>
 </body>
 </html>
