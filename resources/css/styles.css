@@ -411,6 +411,71 @@ footer {
     }
 }
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* =========================================
+   ESTILOS ESPECÍFICOS DO TEMA CLARO (LIGHTER)
+   ========================================= */
+
+/* Quando o body tiver a classe 'theme-mode-lighter' */
+body.theme-mode-lighter {
+    background: #f0f2f5; /* Fundo quase branco */
+    color: #1a1d3a; /* Texto padrão vira azul escuro para leitura */
+}
+
+/* --- EFEITO PRISMA ÓPTICO (TEXTO BRANCO NO BRANCO) --- */
+body.theme-mode-lighter h1 {
+    /* Mantém o texto branco/transparente */
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: #ffffff;
+    
+    /* O Segredo do Prisma: Múltiplas sombras coloridas */
+    text-shadow: 
+        2px 2px 0px #00d9ff,  /* Camada Ciano */
+        -2px -2px 0px #ff0055, /* Camada Magenta */
+        0px 0px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para profundidade */
+    
+    letter-spacing: 1px;
+}
+
+/* Descrição abaixo do título */
+body.theme-mode-lighter .hero-description {
+    color: #4a5568; /* Cinza escuro para ler bem */
+    font-weight: 500;
+}
+
+/* --- BORDAS COLORIDAS E CARTÕES --- */
+
+/* Cards, Botões e Inputs no tema claro */
+body.theme-mode-lighter .feature-card,
+body.theme-mode-lighter .icon-btn,
+body.theme-mode-lighter .theme-popup {
+    background: #ffffff;
+    color: #1a1d3a;
+    box-shadow: 0 10px 30px rgba(91, 122, 255, 0.15); /* Sombra azulada suave */
+    
+    /* Borda Gradiente (Colorida) */
+    border: 2px solid transparent; /* Espaço para a borda */
+    background-image: linear-gradient(#ffffff, #ffffff), /* Fundo do card */
+                      linear-gradient(135deg, #5b7aff 0%, #ff0055 100%); /* Cor da Borda */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+/* Ajuste específico para ícones dentro dos botões no tema claro */
+body.theme-mode-lighter .icon-btn i {
+    color: #5b7aff;
+}
+
+/* Navbar no tema claro */
+body.theme-mode-lighter .navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(91, 122, 255, 0.2);
+}
+
+body.theme-mode-lighter .logo span {
+    color: #1a1d3a; /* Nome do logo escuro */
+}
 
 @media (max-width: 768px) {
     h1 {
