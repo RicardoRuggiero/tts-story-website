@@ -80,8 +80,9 @@ tts-story-website/
 | ---------------------- | -------------------------------------------- |
 | **HTML5**              | Estrutura semântica do site                  |
 | **CSS3**               | Layout, responsividade, variáveis, animações |
+|**CSS3 Avançado**       | Elementos visuais, gradientes, animações e microinterações|
 | **JavaScript Vanilla** | Interatividade, eventos, animações simples   |
-| **SVG**                | Ícones leves e personalizáveis               |
+| **Minifier.org** | Ferramenta para otimização (minificação) de CSS/JS |
 
 ## 🛠️ Ferramentas e Tecnologias Utilizadas<br>
 * **Linguagens:** HTML5, CSS3, JavaScript.<br>
