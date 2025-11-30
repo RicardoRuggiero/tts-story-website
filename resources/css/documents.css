@@ -90,7 +90,7 @@ body {
     bottom: 0;
     overflow-y: auto;
     transition: transform 0.3s ease;
-    z-index: 1000;
+    z-index: 90;
 }
 
 .search-box {
@@ -392,6 +392,7 @@ body {
     .sidebar {
         transform: translateX(-100%); /* Estado fechado */
         box-shadow: 5px 0 15px rgba(0,0,0,0.5); /* Sombra para destaque */
+        z-index: 1000;
     }
 
     .sidebar.active {
