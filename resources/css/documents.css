@@ -90,7 +90,7 @@ body {
     bottom: 0;
     overflow-y: auto;
     transition: transform 0.3s ease;
-    z-index: 90;
+    z-index: 1000;
 }
 
 .search-box {
