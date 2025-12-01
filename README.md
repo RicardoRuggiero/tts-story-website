@@ -74,6 +74,19 @@ tts-story-website/
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/eedd557e-c49b-4cf7-8bf6-23e9a2fb6e27" />
 -
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ec0536cc-6e64-483a-9c92-bc3366347569" />
+-<br><br>
+https://gtmetrix.com/reports/ricardoruggiero.github.io/2q7eln56/
+<img width="1527" height="539" alt="image" src="https://github.com/user-attachments/assets/f246fb9e-3091-4f3a-9670-45f434852ccd" />
+-
+https://pagespeed.web.dev/analysis/https-ricardoruggiero-github-io-tts-story-website/esyhtu0d5l?hl=pt&form_factor=mobile
+<img width="984" height="950" alt="image" src="https://github.com/user-attachments/assets/35bb7622-b475-4194-ba0f-f97999b2cbf3" />
+-
+<img width="1017" height="967" alt="image" src="https://github.com/user-attachments/assets/02dd03b2-518b-4f1b-b7d6-f9ee3e4b0ac4" />
+-
+
+
+
+
 
 # 🧩 Tecnologias Utilizadas
 | Tecnologia             | Uso                                          |
