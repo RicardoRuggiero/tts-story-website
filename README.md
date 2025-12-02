@@ -55,12 +55,12 @@ tts-story-website/
 │── index.html               # Página inicial (landing)
 │
 │── resources/
-├   ├──login.html
-├   ├──tutorial.html
-├   ├──gallery.hmtl
-├   ├──vendas.html
-├   ├──contatos.html
-├   ├──privacy.hmtl
+│   ├── login.html           #estático (testes)
+│   ├── tutorial.html
+│   ├── gallery.hmtl
+│   ├── vendas.html
+│   ├── contatos.html
+│   ├── privacy.hmtl
 │   ├── css/                 # Folhas de estilo
 │   ├── js/                  # Scripts simples
 │   ├── img/                 # Imagens, logos, SVGs
