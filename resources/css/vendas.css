@@ -266,7 +266,9 @@ body {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
     transition: none;
 }
-.plan-cta.animating::after { animation: shine 0.6s ease-out; }
+.plan-cta.animating::after {
+    animation: shine 0.6s ease-out;
+}
 
 @keyframes shine {
     0% { left: -100%; } 100% { left: 100%; }
@@ -318,12 +320,13 @@ footer {
    Tablet:  1 coluna (com ajustes de padding)
    Mobile:  1 coluna (ajustes de fonte)
 */
+
 /* 1. LAPTOPS / DESKTOPS MÉDIOS (Max: 1200px) */
 @media (max-width: 1200px) {
     .pricing-grid {
         /* Muda para 2 colunas. Ideal para 4 itens (2 em cima, 2 em baixo) */
         grid-template-columns: repeat(2, 1fr);
-        max-width: 800px; /* Limita a largura para não ficarem muito esticados */
+        max-width: 800px;
         margin: 0 auto;
         gap: 2rem;
     }
