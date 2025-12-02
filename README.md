@@ -46,8 +46,6 @@ Animações e interatividade com JavaScript simples
 ```
 # 🎨 Screenshots (prévias)
 
-Substitua os arquivos das imagens abaixo pelas suas capturas reais.
-Coloque os arquivos em /resources/img/screenshots/.
 ```
 🏠 Landing Page
 🔐 Login
@@ -55,11 +53,14 @@ Coloque os arquivos em /resources/img/screenshots/.
 📂 Estrutura de Pastas
 tts-story-website/
 │── index.html               # Página inicial (landing)
-│── login.html               # Página de login
-│── settings.html            # Configurações da conta
-│── preferences.html         # Preferências de uso
 │
 │── resources/
+├   ├──login.html
+├   ├──tutorial.html
+├   ├──gallery.hmtl
+├   ├──vendas.html
+├   ├──contatos.html
+├   ├──privacy.hmtl
 │   ├── css/                 # Folhas de estilo
 │   ├── js/                  # Scripts simples
 │   ├── img/                 # Imagens, logos, SVGs
