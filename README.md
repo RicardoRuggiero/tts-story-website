@@ -51,6 +51,7 @@ Animações e interatividade com JavaScript simples
 🔐 Login
 ⚙️ Configurações
 📂 Estrutura de Pastas
+-
 tts-story-website/
 │── index.html               # Página inicial (landing)
 │
