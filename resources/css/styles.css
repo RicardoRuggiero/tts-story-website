@@ -102,8 +102,8 @@ body {
 }
 
 @keyframes wave {
-    0%, 100% { transform: scaleY(0.3); }
-    50% { transform: scaleY(1); }
+    0%, 100% { transform: scaleY(0.3); } /* 30% barrinha */
+    50% { transform: scaleY(1); } /* 100% barrinha*/
 }
 /* fazer a lógica no .ts ou .js para evitar repetições */
 /* 1 */
