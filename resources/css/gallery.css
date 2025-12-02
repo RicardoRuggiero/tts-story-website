@@ -143,7 +143,6 @@ body {
     transform: rotate(-45deg);
 }
 
-/* ================= HEADER ================= */
 .gallery-header {
     text-align: center;
     padding: 5rem 1rem 3rem;
@@ -281,10 +280,7 @@ body.theme-mode-lighter .navbar {
     border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-/* ==========================================================================
-   MEDIA QUERIES - 4 NÍVEIS DE TELA
-   ========================================================================== */
-
+/* RESPONSIVIDADE */
 /* 1. LAPTOP / DESKTOP PEQUENO (Max: 1024px) */
 @media (max-width: 1024px) {
     .navbar { padding: 1.5rem 2rem; }
